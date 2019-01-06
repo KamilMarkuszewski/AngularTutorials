@@ -2,13 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>TodoList</title>
+  <title>Lista zadań</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body>
-  <app-root></app-root>
+<body class="m-a-1">
+  <h3 class="bg-primary p-a-1">Lista</h3>
+  
+  <div class="m-t-1 m-b-1">
+    <input class="form-control" />
+    <button class="btn btn-primary m-t-1">Dodaj</button>
+  </div>
+
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Zadanie</th>
+        <th>Wykonane?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Zadanie 1</td><td>Tak</td></tr>
+      <tr><td>Zadanie 2</td><td>Tak</td></tr>
+      <tr><td>Zadanie 3</td><td>Nie</td></tr>
+      <tr><td>Zadanie 4</td><td>Nie</td></tr>
+
+    </tbody>
+  </table>
+
 </body>
 </html>
