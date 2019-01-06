@@ -3,6 +3,7 @@ export class Model
 {
     user;
     items;
+    showAll;
 
     constructor() {        
         this.user = "Username";
@@ -13,6 +14,7 @@ export class Model
             new TodoItem("Task 3", true),
             new TodoItem("Task 4", true)
         ];
+        this.showAll = true;
     }
 }
 

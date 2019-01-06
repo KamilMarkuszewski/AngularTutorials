@@ -1,11 +1,23 @@
+<div class="m-a-2">
 
 <h3>Lista {{getName()}}</h3>
+
+<h4 class="m-a-2"><input type="checkbox" [(ngModel)]="model.showAll"/> Show all</h4>
+
+<div class="m-t-2 m-b-2">
+  
+  <input class="form-control" #todoText/>
+  <button class="btn btn-primary m-t-1" (click)="addItem(todoText.value)">
+    Add
+  </button>
+</div>
 
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th></th>
       <th>Task</th>
+      <th>Change state</th>
       <th>Done</th>
     </tr>
   </thead>
@@ -13,6 +25,7 @@
     <tr *ngFor="let item of getTodoItems(); let i = index;">
       <td>{{i + 1}}</td>
       <td>{{item.action}}</td>
+      <td><input type="checkbox" [(ngModel)]="item.done"/></td>
       <td [ngSwitch]="item.done">
         <span *ngSwitchCase="true">Yes</span>
         <span *ngSwitchDefault>No</span>
@@ -22,3 +35,4 @@
 
 </table>
 
+</div>
