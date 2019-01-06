@@ -1,12 +1,28 @@
-var model = 
-{
-    user: "UserName",
-    items: 
-    [
-        {action: "Task 1", done: false},
-        {action: "Task 2", done: false},
-        {action: "Task 3", done: true},
-        {action: "Task 4", done: true},
-    ]
 
+export class Model
+{
+    user;
+    items;
+
+    constructor() {        
+        this.user = "Username";
+        this.items = 
+        [
+            new TodoItem("Task 1", false),
+            new TodoItem("Task 2", false),
+            new TodoItem("Task 3", true),
+            new TodoItem("Task 4", true)
+        ];
+    }
+}
+
+export class TodoItem
+{
+    action;
+    done;
+
+    constructor(action, done) {
+        this.action = action;
+        this.done = done;
+    }
 }
